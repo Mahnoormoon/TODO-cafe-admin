@@ -4,7 +4,8 @@ const config = {
     basename: '/free',
     defaultPath: '/dashboard/default',
     fontFamily: `'Roboto', sans-serif`,
-    borderRadius: 12
+    borderRadius: 12,
+    api_url: 'http://localhost:5000'
 };
 
 export default config;

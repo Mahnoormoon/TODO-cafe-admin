@@ -11,12 +11,25 @@ import TotalIncomeDarkCard from './TotalIncomeDarkCard';
 import TotalIncomeLightCard from './TotalIncomeLightCard';
 import TotalGrowthBarChart from './TotalGrowthBarChart';
 import { gridSpacing } from 'store/constant';
+import config from '../../../config';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
 const Dashboard = () => {
+    const url = config.api_url;
+
+    const [userList, setUserList] = useState([]);
+
+    const fetchUsers = async () => {
+        const res = await fetch(url + '/user/getall');
+        const data = await res.json();
+        setUserList(data.result);
+        console.log(data);
+    };
+
     const [isLoading, setLoading] = useState(true);
     useEffect(() => {
+        fetchUsers();
         setLoading(false);
     }, []);
 
@@ -25,7 +38,7 @@ const Dashboard = () => {
             <Grid item xs={12}>
                 <Grid container spacing={gridSpacing}>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <EarningCard isLoading={isLoading} />
+                        <EarningCard cardValue={userList.length} isLoading={isLoading} />
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
                         <TotalOrderLineChartCard isLoading={isLoading} />
