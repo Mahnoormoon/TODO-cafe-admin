@@ -1,5 +1,7 @@
 // material-ui
 import { useTheme } from '@mui/material/styles';
+import logo from 'assets/images/ToDoCafe_Logo.png';
+
 
 /**
  * if you want to use image instead of <svg> uncomment following.
@@ -16,7 +18,7 @@ const Logo = () => {
 
     return (
         <>
-            <img style={{ width: 30 }} src={'ToDoCafe_Logo.png'} alt="logoerr" width="100" />
+            <img style={{ width: 50 }} src={logo} alt="logoerr" width="100" />
             &nbsp;&nbsp;&nbsp;<h3>ToDoCafe'</h3>
         </>
     );

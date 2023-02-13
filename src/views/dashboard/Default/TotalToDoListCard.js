@@ -180,8 +180,8 @@ const ToDoListCard = ({ isLoading, cardValue }) => {
     );
 };
 
-EarningCard.propTypes = {
-    isLoading: PropTypes.bool
-};
+// EarningCard.propTypes = {
+//     isLoading: PropTypes.bool
+// };
 
 export default ToDoListCard;
