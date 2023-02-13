@@ -5,7 +5,7 @@ import { Grid } from '@mui/material';
 
 // project imports
 import TotalUsersCard from './TotalUsersCard';
-import ToDoListCard from './TotalToDoListCard';
+import UserProfileCard from './TotalUserProfileCard';
 import TotalMusicPlayerCard from './TotalMusicPlayerCard';
 import TotalStudyMethodsCard from './TotalStudyMethodsCard';
 import TotalReminderCard from './TotalReminderCard';
@@ -32,17 +32,92 @@ const Dashboard = () => {
     useEffect(() => {
         fetchUsers();
         setLoading(false);
-    }, []); 
+    }, []);
+    
+    /*const [userprofileList, setUserprofileList] = useState([]);
+
+    const fetchUserprofiles = async () => {
+        const res = await fetch(url + '/userprofile/getall');
+        const data = await res.json();
+        setUserprofileList(data.result);
+        console.log(data);
+    };
+
+    const [isLoading, setLoading] = useState(true);
+    useEffect(() => {
+        fetchUserprofiles();
+        setLoading(false);
+    }, []); */
+
+    /*const [musiclistenList, setMusiclistenList] = useState([]);
+
+    const fetchMusiclistens = async () => {
+        const res = await fetch(url + '/music/getall');
+        const data = await res.json();
+        setMusiclistenList(data.result);
+        console.log(data);
+    };
+
+    const [isLoading, setLoading] = useState(true);
+    useEffect(() => {
+        fetchMusiclistens();
+        setLoading(false);
+    }, []); */
+
+    /*const [studymethodList, setStudymethodList] = useState([]);
+
+    const fetchStudymethods = async () => {
+        const res = await fetch(url + '/study/getall');
+        const data = await res.json();
+        setStudymethodList(data.result);
+        console.log(data);
+    };
+
+    const [isLoading, setLoading] = useState(true);
+    useEffect(() => {
+        fetchStudymethods();
+        setLoading(false);
+    }, []); */
+
+    /*const [reminderList, setReminderList] = useState([]);
+
+    const fetchReminders = async () => {
+        const res = await fetch(url + '/reminder/getall');
+        const data = await res.json();
+        setReminderList(data.result);
+        console.log(data);
+    };
+
+    const [isLoading, setLoading] = useState(true);
+    useEffect(() => {
+        fetchReminders();
+        setLoading(false);
+    }, []); */
+
+    /*const [widgetList, setWidgetList] = useState([]);
+
+    const fetchWidgets = async () => {
+        const res = await fetch(url + '/widget/getall');
+        const data = await res.json();
+        setWidgetList(data.result);
+        console.log(data);
+    };
+
+    const [isLoading, setLoading] = useState(true);
+    useEffect(() => {
+        fetchWidgets();
+        setLoading(false);
+    }, []); */
 
     return (
         <Grid container spacing={gridSpacing}>
             <Grid item xs={12}>
                 <Grid container spacing={gridSpacing}>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <ToDoListCard cardValue={userList.length} isLoading={isLoading} />
+                        <TotalUsersCard isLoading={isLoading} />
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <TotalUsersCard isLoading={isLoading} />
+                        <UserProfileCard cardValue={userList.length} isLoading={isLoading} />
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
                         <TotalMusicPlayerCard isLoading={isLoading} />

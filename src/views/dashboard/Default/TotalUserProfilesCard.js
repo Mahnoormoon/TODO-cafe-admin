@@ -7,7 +7,7 @@ import { Avatar, Box, Grid, Menu, MenuItem, Typography } from '@mui/material';
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
-import SkeletonToDoListCard from 'ui-component/cards/Skeleton/ToDoListCard';
+import SkeletonUserProfileCard from 'ui-component/cards/Skeleton/UserProfileCard';
 
 // assets
 import EarningIcon from 'assets/images/icons/earning.svg';
@@ -54,9 +54,9 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
     }
 }));
 
-// ===========================|| DASHBOARD DEFAULT - TOTAL TODOLIST CARD ||=========================== //
+// ===========================|| DASHBOARD DEFAULT - TOTAL USER PROFILE CARD ||=========================== //
 
-const ToDoListCard = ({ isLoading, cardValue }) => {
+const TotalUserProfileCard = ({ isLoading, cardValue }) => {
     const theme = useTheme();
 
     const [anchorEl, setAnchorEl] = useState(null);
@@ -72,7 +72,7 @@ const ToDoListCard = ({ isLoading, cardValue }) => {
     return (
         <>
             {isLoading ? (
-                <SkeletonToDoListCard />
+                <SkeletonUserProfileCard />
             ) : (
                 <CardWrapper border={false} content={false}>
                     <Box sx={{ p: 2.25 }}>
@@ -178,7 +178,7 @@ const ToDoListCard = ({ isLoading, cardValue }) => {
                                         color: theme.palette.secondary[200]
                                     }}
                                 >
-                                    Total ToDos
+                                    Total Profiles
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -193,4 +193,4 @@ const ToDoListCard = ({ isLoading, cardValue }) => {
 //     isLoading: PropTypes.bool
 // };
 
-export default ToDoListCard;
+export default TotalUserProfileCard;

@@ -4,7 +4,7 @@ import Skeleton from '@mui/material/Skeleton';
 
 // ==============================|| SKELETON - EARNING CARD ||============================== //
 
-const ToDoListCard = () => (
+const UserProfileCard = () => (
     <Card>
         <CardContent>
             <Grid container direction="column">
@@ -29,4 +29,4 @@ const ToDoListCard = () => (
     </Card>
 );
 
-export default ToDoListCard;
+export default UserProfileCard;
