@@ -32,7 +32,7 @@ const Dashboard = () => {
     useEffect(() => {
         fetchUsers();
         setLoading(false);
-    }, []);
+    }, []); 
 
     return (
         <Grid container spacing={gridSpacing}>
