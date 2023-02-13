@@ -16,8 +16,8 @@ const Logo = () => {
 
     return (
         <>
-            <img style={{ width: 30 }} src={'https://s3.amazonaws.com/ionic-marketplace/todo-app-theme/icon.png'} alt="Berry" width="100" />
-            &nbsp;&nbsp;<h3>TODO-Cafe</h3>
+            <img style={{ width: 30 }} src={'ToDoCafe_Logo.png'} alt="logoerr" width="100" />
+            &nbsp;&nbsp;&nbsp;<h3>ToDoCafe'</h3>
         </>
     );
 };

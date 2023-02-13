@@ -39,9 +39,9 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
     }
 }));
 
-// ==============================|| DASHBOARD - TOTAL INCOME DARK CARD ||============================== //
+// ==============================|| DASHBOARD - TOTAL SCHEDULING/REMINDER CARD ||============================== //
 
-const TotalIncomeDarkCard = ({ isLoading }) => {
+const TotalReminderCard = ({ isLoading }) => {
     const theme = useTheme();
 
     return (
@@ -74,12 +74,12 @@ const TotalIncomeDarkCard = ({ isLoading }) => {
                                     }}
                                     primary={
                                         <Typography variant="h4" sx={{ color: '#fff' }}>
-                                            $203k
+                                            0
                                         </Typography>
                                     }
                                     secondary={
                                         <Typography variant="subtitle2" sx={{ color: 'primary.light', mt: 0.25 }}>
-                                            Total Income
+                                            Total Reminders
                                         </Typography>
                                     }
                                 />
@@ -92,8 +92,8 @@ const TotalIncomeDarkCard = ({ isLoading }) => {
     );
 };
 
-TotalIncomeDarkCard.propTypes = {
+TotalReminderCard.propTypes = {
     isLoading: PropTypes.bool
 };
 
-export default TotalIncomeDarkCard;
+export default TotalReminderCard;

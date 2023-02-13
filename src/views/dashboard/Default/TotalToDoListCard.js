@@ -54,9 +54,9 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
     }
 }));
 
-// ===========================|| DASHBOARD DEFAULT - EARNING CARD ||=========================== //
+// ===========================|| DASHBOARD DEFAULT - TOTAL TODOLIST CARD ||=========================== //
 
-const EarningCard = ({ isLoading, cardValue }) => {
+const ToDoListCard = ({ isLoading, cardValue }) => {
     const theme = useTheme();
 
     const [anchorEl, setAnchorEl] = useState(null);
@@ -169,7 +169,7 @@ const EarningCard = ({ isLoading, cardValue }) => {
                                         color: theme.palette.secondary[200]
                                     }}
                                 >
-                                    Total Earning
+                                    Total ToDos
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -184,4 +184,4 @@ EarningCard.propTypes = {
     isLoading: PropTypes.bool
 };
 
-export default EarningCard;
+export default ToDoListCard;

@@ -37,9 +37,9 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
     }
 }));
 
-// ==============================|| DASHBOARD - TOTAL INCOME LIGHT CARD ||============================== //
+// ==============================|| DASHBOARD - TOTAL WIDGETS CARD ||============================== //
 
-const TotalIncomeLightCard = ({ isLoading }) => {
+const TotalWidgetsCard = ({ isLoading }) => {
     const theme = useTheme();
 
     return (
@@ -79,7 +79,7 @@ const TotalIncomeLightCard = ({ isLoading }) => {
                                                 mt: 0.5
                                             }}
                                         >
-                                            Total Income
+                                            Total Widgets
                                         </Typography>
                                     }
                                 />
@@ -92,8 +92,8 @@ const TotalIncomeLightCard = ({ isLoading }) => {
     );
 };
 
-TotalIncomeLightCard.propTypes = {
+TotalWidgetsCard.propTypes = {
     isLoading: PropTypes.bool
 };
 
-export default TotalIncomeLightCard;
+export default TotalWidgetsCard;
