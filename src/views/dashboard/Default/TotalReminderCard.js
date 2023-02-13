@@ -6,7 +6,7 @@ import { Avatar, Box, List, ListItem, ListItemAvatar, ListItemText, Typography }
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
-import TotalIncomeCard from 'ui-component/cards/Skeleton/TotalIncomeCard';
+import TotalListenViewCard from 'ui-component/cards/Skeleton/TotalListenViewCard';
 
 // assets
 import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
@@ -47,7 +47,7 @@ const TotalReminderCard = ({ isLoading }) => {
     return (
         <>
             {isLoading ? (
-                <TotalIncomeCard />
+                <TotalListenViewCard />
             ) : (
                 <CardWrapper border={false} content={false}>
                     <Box sx={{ p: 2 }}>

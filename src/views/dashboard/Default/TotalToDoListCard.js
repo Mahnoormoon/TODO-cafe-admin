@@ -7,7 +7,7 @@ import { Avatar, Box, Grid, Menu, MenuItem, Typography } from '@mui/material';
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
-import SkeletonEarningCard from 'ui-component/cards/Skeleton/EarningCard';
+import SkeletonToDoListCard from 'ui-component/cards/Skeleton/ToDoListCard';
 
 // assets
 import EarningIcon from 'assets/images/icons/earning.svg';
@@ -72,7 +72,7 @@ const ToDoListCard = ({ isLoading, cardValue }) => {
     return (
         <>
             {isLoading ? (
-                <SkeletonEarningCard />
+                <SkeletonToDoListCard />
             ) : (
                 <CardWrapper border={false} content={false}>
                     <Box sx={{ p: 2.25 }}>
