@@ -10,7 +10,6 @@ import TotalMusicPlayerCard from './TotalMusicPlayerCard';
 import TotalStudyMethodsCard from './TotalStudyMethodsCard';
 import TotalReminderCard from './TotalReminderCard';
 import TotalWidgetsCard from './TotalWidgetsCard';
-import PopularCard from './PopularCard';
 import TotalGrowthBarChart from './TotalGrowthBarChart';
 import { gridSpacing } from 'store/constant';
 import config from '../../../config';

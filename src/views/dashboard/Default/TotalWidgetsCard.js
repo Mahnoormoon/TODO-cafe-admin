@@ -70,7 +70,7 @@ const TotalWidgetsCard = ({ isLoading }) => {
                                         mt: 0.45,
                                         mb: 0.45
                                     }}
-                                    primary={<Typography variant="h4">$203k</Typography>}
+                                    primary={<Typography variant="h4">0</Typography>}
                                     secondary={
                                         <Typography
                                             variant="subtitle2"

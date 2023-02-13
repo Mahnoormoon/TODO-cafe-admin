@@ -1,4 +1,4 @@
-// ===========================|| DASHBOARD - BAJAJ AREA CHART ||=========================== //
+// ===========================|| DASHBOARD - ToDoCafe' CHART ||=========================== //
 
 const chartData = {
     type: 'area',

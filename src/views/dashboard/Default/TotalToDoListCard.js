@@ -80,6 +80,15 @@ const ToDoListCard = ({ isLoading, cardValue }) => {
                             <Grid item>
                                 <Grid container justifyContent="space-between">
                                     <Grid item>
+                                    <Button
+                                            disableElevation
+                                            variant={timeValue ? 'contained' : 'text'}
+                                            size="small"
+                                            sx={{ color: 'inherit' }}
+                                            onClick={(e) => handleChangeTime(e, true)}
+                                        >
+                                            Per User
+                                        </Button>
                                         <Avatar
                                             variant="rounded"
                                             sx={{

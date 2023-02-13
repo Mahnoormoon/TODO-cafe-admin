@@ -96,6 +96,15 @@ const TotalUsersCard = ({ isLoading }) => {
                                         </Avatar>
                                     </Grid>
                                     <Grid item>
+                                    <Button
+                                            disableElevation
+                                            variant={timeValue ? 'contained' : 'text'}
+                                            size="small"
+                                            sx={{ color: 'inherit' }}
+                                            onClick={(e) => handleChangeTime(e, true)}
+                                        >
+                                            Daily
+                                        </Button>
                                         <Button
                                             disableElevation
                                             variant={timeValue ? 'contained' : 'text'}
@@ -152,7 +161,7 @@ const TotalUsersCard = ({ isLoading }) => {
                                                         color: theme.palette.primary[200]
                                                     }}
                                                 >
-                                                    Total ToDos
+                                                    Total Users
                                                 </Typography>
                                             </Grid>
                                         </Grid>

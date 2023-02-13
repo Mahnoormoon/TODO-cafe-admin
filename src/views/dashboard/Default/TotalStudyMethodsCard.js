@@ -96,6 +96,15 @@ const TotalStudyMethodsCard = ({ isLoading }) => {
                                         </Avatar>
                                     </Grid>
                                     <Grid item>
+                                    <Button
+                                            disableElevation
+                                            variant={timeValue ? 'contained' : 'text'}
+                                            size="small"
+                                            sx={{ color: 'inherit' }}
+                                            onClick={(e) => handleChangeTime(e, true)}
+                                        >
+                                            Daily
+                                        </Button>
                                         <Button
                                             disableElevation
                                             variant={timeValue ? 'contained' : 'text'}
@@ -152,7 +161,7 @@ const TotalStudyMethodsCard = ({ isLoading }) => {
                                                         color: theme.palette.primary[200]
                                                     }}
                                                 >
-                                                    Total Study MethodS ViewS
+                                                    Total Study Methods View
                                                 </Typography>
                                             </Grid>
                                         </Grid>

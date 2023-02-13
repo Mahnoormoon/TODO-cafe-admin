@@ -96,6 +96,15 @@ const TotalMusicPlayerCard = ({ isLoading }) => {
                                         </Avatar>
                                     </Grid>
                                     <Grid item>
+                                    <Button
+                                            disableElevation
+                                            variant={timeValue ? 'contained' : 'text'}
+                                            size="small"
+                                            sx={{ color: 'inherit' }}
+                                            onClick={(e) => handleChangeTime(e, true)}
+                                        >
+                                            Daily
+                                        </Button>
                                         <Button
                                             disableElevation
                                             variant={timeValue ? 'contained' : 'text'}

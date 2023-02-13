@@ -10,11 +10,11 @@ import ApexCharts from 'apexcharts';
 import Chart from 'react-apexcharts';
 
 // project imports
-import chartData from './chart-data/bajaj-area-chart';
+import chartData from './chart-data/todocafe-chart';
 
-// ===========================|| DASHBOARD DEFAULT - BAJAJ AREA CHART CARD ||=========================== //
+// ===========================|| DASHBOARD DEFAULT - ToDoCafe' CHART CARD ||=========================== //
 
-const BajajAreaChartCard = () => {
+const ToDoCafeChartCard = () => {
     const theme = useTheme();
     const customization = useSelector((state) => state.customization);
     const { navType } = customization;
@@ -39,19 +39,19 @@ const BajajAreaChartCard = () => {
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
                             <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.dark }}>
-                                Bajaj Finery
+                                ToDoCafe'
                             </Typography>
                         </Grid>
                         <Grid item>
                             <Typography variant="h4" sx={{ color: theme.palette.grey[800] }}>
-                                $1839.00
+                                0
                             </Typography>
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid item xs={12}>
                     <Typography variant="subtitle2" sx={{ color: theme.palette.grey[800] }}>
-                        10% Profit
+                        0% 
                     </Typography>
                 </Grid>
             </Grid>
@@ -60,4 +60,4 @@ const BajajAreaChartCard = () => {
     );
 };
 
-export default BajajAreaChartCard;
+export default ToDoCafeChartCard;
