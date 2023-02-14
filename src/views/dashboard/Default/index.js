@@ -121,7 +121,7 @@ const Dashboard = () => {
                          <UserProfileCard cardValue={userList.length} isLoading={isLoading} /> 
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <TotalMusicPlayerCard musicValue={userList.length} isLoading={isLoading} />
+                        <TotalMusicPlayerCard musicValue={musiclistenList.length} isLoading={isLoading} />
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
                         <TotalStudyMethodsCard isLoading={isLoading} />
