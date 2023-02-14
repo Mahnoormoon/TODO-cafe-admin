@@ -82,7 +82,7 @@ const TotalUserProfileCard = ({ isLoading, cardValue }) => {
                                     <Grid item>
                                     <Button
                                             disableElevation
-                                            variant={timeValue ? 'contained' : 'text'}
+                                            // variant={timeValue ? 'contained' : 'text'}
                                             size="small"
                                             sx={{ color: 'inherit' }}
                                             onClick={(e) => handleChangeTime(e, true)}
