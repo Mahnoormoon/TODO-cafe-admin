@@ -5,7 +5,7 @@ import { Grid } from '@mui/material';
 
 // project imports
 import TotalUsersCard from './TotalUsersCard';
-import UserProfileCard from './TotalUserProfileCard';
+import UserProfileCard from './TotalUserProfilesCard';
 import TotalMusicPlayerCard from './TotalMusicPlayerCard';
 import TotalStudyMethodsCard from './TotalStudyMethodsCard';
 import TotalReminderCard from './TotalReminderCard';
@@ -13,6 +13,7 @@ import TotalWidgetsCard from './TotalWidgetsCard';
 import TotalGrowthBarChart from './TotalGrowthBarChart';
 import { gridSpacing } from 'store/constant';
 import config from '../../../config';
+import PopularCard from 'ui-component/cards/Skeleton/PopularCard';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
@@ -117,7 +118,7 @@ const Dashboard = () => {
                         <TotalUsersCard isLoading={isLoading} />
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <UserProfileCard cardValue={userList.length} isLoading={isLoading} />
+                        {/* <UserProfileCard cardValue={userList.length} isLoading={isLoading} /> */}
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
                         <TotalMusicPlayerCard isLoading={isLoading} />

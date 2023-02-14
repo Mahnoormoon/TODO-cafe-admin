@@ -10,7 +10,7 @@ import Chart from 'react-apexcharts';
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
-import SkeletonTotalUsersCard from 'ui-component/cards/Skeleton/ToDoListCard';
+import SkeletonTotalUsersCard from 'ui-component/cards/Skeleton/TotalGrowthBarChart';
 
 import ChartDataMonth from './chart-data/total-order-month-line-chart';
 import ChartDataYear from './chart-data/total-order-year-line-chart';
