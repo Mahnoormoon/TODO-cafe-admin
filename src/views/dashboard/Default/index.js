@@ -5,7 +5,7 @@ import { Grid } from '@mui/material';
 
 // project imports
 import TotalUsersCard from './TotalUsersCard';
-import UserProfileCard from './TotalUserProfilesCard';
+import UserProfileCard from './TotalUserProfileCard';
 import TotalMusicPlayerCard from './TotalMusicPlayerCard';
 import TotalStudyMethodsCard from './TotalStudyMethodsCard';
 import TotalReminderCard from './TotalReminderCard';
