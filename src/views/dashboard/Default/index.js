@@ -117,9 +117,9 @@ const Dashboard = () => {
                     <Grid item lg={4} md={6} sm={6} xs={12}>
                         <TotalUsersCard isLoading={isLoading} />
                     </Grid>
-                    <Grid item lg={4} md={6} sm={6} xs={12}>
-                        {/* <UserProfileCard cardValue={userList.length} isLoading={isLoading} /> */}
-                    </Grid>
+                    {/*<Grid item lg={4} md={6} sm={6} xs={12}>
+                         <UserProfileCard cardValue={userList.length} isLoading={isLoading} /> 
+                    </Grid>*/}
                     <Grid item lg={4} md={6} sm={6} xs={12}>
                         <TotalMusicPlayerCard isLoading={isLoading} />
                     </Grid>
