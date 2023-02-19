@@ -39,7 +39,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL WIDGETS CARD ||============================== //
 
-const TotalWidgetsCard = ({ isLoading }) => {
+const TotalWidgetsCard = ({ isLoading, widgetValue }) => {
     const theme = useTheme();
 
     return (
@@ -70,7 +70,7 @@ const TotalWidgetsCard = ({ isLoading }) => {
                                         mt: 0.45,
                                         mb: 0.45
                                     }}
-                                    primary={<Typography variant="h4">0</Typography>}
+                                    primary={<Typography variant="h4"> {widgetValue} </Typography>}
                                     secondary={
                                         <Typography
                                             variant="subtitle2"

@@ -56,7 +56,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ===========================|| DASHBOARD DEFAULT - TOTAL USER PROFILE CARD ||=========================== //
 
-const TotalUserProfileCard = ({ isLoading, cardValue }) => {
+const TotalUserProfileCard = ({ isLoading, userValue }) => {
     const theme = useTheme();
 
     const [anchorEl, setAnchorEl] = useState(null);
@@ -153,7 +153,7 @@ const TotalUserProfileCard = ({ isLoading, cardValue }) => {
                                 <Grid container alignItems="center">
                                     <Grid item>
                                         <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                            {cardValue}
+                                            {userValue}
                                         </Typography>
                                     </Grid>
                                     <Grid item>

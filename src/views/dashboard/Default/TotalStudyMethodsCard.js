@@ -63,7 +63,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL STUDY METHODS CARD ||============================== //
 
-const TotalStudyMethodsCard = ({ isLoading }) => {
+const TotalStudyMethodsCard = ({ isLoading, studyValue }) => {
     const theme = useTheme();
 
     const [timeValue, setTimeValue] = useState(false);
@@ -133,11 +133,11 @@ const TotalStudyMethodsCard = ({ isLoading }) => {
                                             <Grid item>
                                                 {timeValue ? (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        0
+                                                        {studyValue}
                                                     </Typography>
                                                 ) : (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        0
+                                                        {studyValue}
                                                     </Typography>
                                                 )}
                                             </Grid>
@@ -161,7 +161,7 @@ const TotalStudyMethodsCard = ({ isLoading }) => {
                                                         color: theme.palette.primary[200]
                                                     }}
                                                 >
-                                                    Total Study Methods View
+                                                    Total Study Methods Views
                                                 </Typography>
                                             </Grid>
                                         </Grid>

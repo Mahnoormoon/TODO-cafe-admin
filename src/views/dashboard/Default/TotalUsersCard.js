@@ -63,7 +63,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL USERS CARD ||============================== //
 
-const TotalUsersCard = ({ isLoading }) => {
+const TotalUsersCard = ({ isLoading, cardValue }) => {
     const theme = useTheme();
 
     const [timeValue, setTimeValue] = useState(false);
@@ -133,11 +133,11 @@ const TotalUsersCard = ({ isLoading }) => {
                                             <Grid item>
                                                 {timeValue ? (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        0
+                                                        {cardValue}
                                                     </Typography>
                                                 ) : (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        0
+                                                        {cardValue}
                                                     </Typography>
                                                 )}
                                             </Grid>

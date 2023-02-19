@@ -41,7 +41,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL SCHEDULING/REMINDER CARD ||============================== //
 
-const TotalReminderCard = ({ isLoading }) => {
+const TotalReminderCard = ({ isLoading, reminderValue }) => {
     const theme = useTheme();
 
     return (
@@ -74,7 +74,7 @@ const TotalReminderCard = ({ isLoading }) => {
                                     }}
                                     primary={
                                         <Typography variant="h4" sx={{ color: '#fff' }}>
-                                            0
+                                            {reminderValue}
                                         </Typography>
                                     }
                                     secondary={

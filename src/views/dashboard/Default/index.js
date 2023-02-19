@@ -13,7 +13,6 @@ import TotalWidgetsCard from './TotalWidgetsCard';
 import TotalGrowthBarChart from './TotalGrowthBarChart';
 import { gridSpacing } from 'store/constant';
 import config from '../../../config';
-import PopularCard from 'ui-component/cards/Skeleton/PopularCard';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
@@ -35,7 +34,7 @@ const Dashboard = () => {
         setLoading(false);
     }, []);
     
-    /*const [userprofileList, setUserprofileList] = useState([]);
+    const [userprofileList, setUserprofileList] = useState([]);
 
     const fetchUserprofiles = async () => {
         const res = await fetch(url + '/userprofile/getall');
@@ -48,7 +47,7 @@ const Dashboard = () => {
     useEffect(() => {
         fetchUserprofiles();
         setLoading(false);
-    }, []); */
+    }, []); 
 
     /*const [musiclistenList, setMusiclistenList] = useState([]);
 
@@ -115,24 +114,24 @@ const Dashboard = () => {
             <Grid item xs={12}>
                 <Grid container spacing={gridSpacing}>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <TotalUsersCard isLoading={isLoading} />
+                        <TotalUsersCard cardValue={userList.length} isLoading={isLoading} />
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                         <UserProfileCard cardValue={userList.length} isLoading={isLoading} /> 
+                         <UserProfileCard userValue={userprofileList.length} isLoading={isLoading} /> 
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
                         <TotalMusicPlayerCard musicValue={musiclistenList.length} isLoading={isLoading} />
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <TotalStudyMethodsCard isLoading={isLoading} />
+                        <TotalStudyMethodsCard studyValue={studymethodList.length} isLoading={isLoading} />
                     </Grid>
                     <Grid item lg={4} md={12} sm={12} xs={12}>
                         <Grid container spacing={gridSpacing}>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <TotalReminderCard isLoading={isLoading} />
+                                <TotalReminderCard reminderValue={reminderList.length} isLoading={isLoading} />
                             </Grid>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <TotalWidgetsCard isLoading={isLoading} />
+                                <TotalWidgetsCard widgetValue={widgetList.length} isLoading={isLoading} />
                             </Grid>
                         </Grid>
                     </Grid>
@@ -143,9 +142,9 @@ const Dashboard = () => {
                     <Grid item xs={12} md={8}>
                         <TotalGrowthBarChart isLoading={isLoading} />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    /*<Grid item xs={12} md={4}>
                         <PopularCard isLoading={isLoading} />
-                    </Grid>
+                    </Grid>*/
                 </Grid>
             </Grid>
         </Grid>
