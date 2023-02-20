@@ -43,7 +43,7 @@ const Dashboard = () => {
         console.log(data);
     };
 
-    const [userprofileLoading, setUserProfileLoading] = useState(true);
+    const [userprofileLoading, setUserprofileLoading] = useState(true);
     useEffect(() => {
         fetchUserprofiles();
         setLoading(false);
@@ -114,24 +114,24 @@ const Dashboard = () => {
             <Grid item xs={12}>
                 <Grid container spacing={gridSpacing}>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <TotalUsersCard cardValue={userList.length} isLoading={isLoading} />
+                        <TotalUsersCard cardValue={userList.length} userLoading={userLoading} />
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                         <UserProfileCard userValue={userprofileList.length} isLoading={isLoading} /> 
+                         <UserProfileCard userValue={userprofileList.length} userprofileLoading={userprofileLoading} /> 
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <TotalMusicPlayerCard musicValue={musiclistenList.length} isLoading={isLoading} />
+                        <TotalMusicPlayerCard musicValue={musiclistenList.length} musicLoading={musicLoading} />
                     </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
-                        <TotalStudyMethodsCard studyValue={studymethodList.length} isLoading={isLoading} />
+                        <TotalStudyMethodsCard studyValue={studymethodList.length} studyLoading={studyLoading} />
                     </Grid>
                     <Grid item lg={4} md={12} sm={12} xs={12}>
                         <Grid container spacing={gridSpacing}>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <TotalReminderCard reminderValue={reminderList.length} isLoading={isLoading} />
+                                <TotalReminderCard reminderValue={reminderList.length} reminderLoading={reminderLoading} />
                             </Grid>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <TotalWidgetsCard widgetValue={widgetList.length} isLoading={isLoading} />
+                                <TotalWidgetsCard widgetValue={widgetList.length} widgetLoading={widgetLoading} />
                             </Grid>
                         </Grid>
                     </Grid>

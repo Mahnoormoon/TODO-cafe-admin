@@ -63,7 +63,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL MUSIC LISTENS CARD ||============================== //
 
-const TotalMusicPlayerCard = ({ isLoading, musicValue }) => {
+const TotalMusicPlayerCard = ({ musicLoading, musicValue }) => {
     const theme = useTheme();
 
     const [timeValue, setTimeValue] = useState(false);
@@ -73,7 +73,7 @@ const TotalMusicPlayerCard = ({ isLoading, musicValue }) => {
 
     return (
         <>
-            {isLoading ? (
+            {musicLoading ? (
                 <SkeletonTotalOrderCard />
             ) : (
                 <CardWrapper border={false} content={false}>
@@ -180,7 +180,7 @@ const TotalMusicPlayerCard = ({ isLoading, musicValue }) => {
 };
 
 TotalMusicPlayerCard.propTypes = {
-    isLoading: PropTypes.bool
+    musicLoading: PropTypes.bool
 };
 
 export default TotalMusicPlayerCard;

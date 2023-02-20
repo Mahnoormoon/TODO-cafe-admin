@@ -56,7 +56,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ===========================|| DASHBOARD DEFAULT - TOTAL USER PROFILE CARD ||=========================== //
 
-const TotalUserProfileCard = ({ isLoading, userValue }) => {
+const TotalUserProfileCard = ({ userprofileLoading, userValue }) => {
     const theme = useTheme();
 
     const [anchorEl, setAnchorEl] = useState(null);
@@ -71,7 +71,7 @@ const TotalUserProfileCard = ({ isLoading, userValue }) => {
 
     return (
         <>
-            {isLoading ? (
+            {userprofileLoading ? (
                 <SkeletonUserProfileCard />
             ) : (
                 <CardWrapper border={false} content={false}>
@@ -189,8 +189,8 @@ const TotalUserProfileCard = ({ isLoading, userValue }) => {
     );
 };
 
-// EarningCard.propTypes = {
-//     isLoading: PropTypes.bool
-// };
+ TotalUserProfileCard.propTypes = {
+     userprofileLoading: PropTypes.bool
+};
 
 export default TotalUserProfileCard;

@@ -39,12 +39,12 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL WIDGETS CARD ||============================== //
 
-const TotalWidgetsCard = ({ isLoading, widgetValue }) => {
+const TotalWidgetsCard = ({ widgetLoading, widgetValue }) => {
     const theme = useTheme();
 
     return (
         <>
-            {isLoading ? (
+            {widgetLoading ? (
                 <TotalListenViewCard />
             ) : (
                 <CardWrapper border={false} content={false}>
@@ -93,7 +93,7 @@ const TotalWidgetsCard = ({ isLoading, widgetValue }) => {
 };
 
 TotalWidgetsCard.propTypes = {
-    isLoading: PropTypes.bool
+    widgetLoading: PropTypes.bool
 };
 
 export default TotalWidgetsCard;

@@ -41,12 +41,12 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL SCHEDULING/REMINDER CARD ||============================== //
 
-const TotalReminderCard = ({ isLoading, reminderValue }) => {
+const TotalReminderCard = ({ reminderLoading, reminderValue }) => {
     const theme = useTheme();
 
     return (
         <>
-            {isLoading ? (
+            {reminderLoading ? (
                 <TotalListenViewCard />
             ) : (
                 <CardWrapper border={false} content={false}>
@@ -93,7 +93,7 @@ const TotalReminderCard = ({ isLoading, reminderValue }) => {
 };
 
 TotalReminderCard.propTypes = {
-    isLoading: PropTypes.bool
+    reminderLoading: PropTypes.bool
 };
 
 export default TotalReminderCard;

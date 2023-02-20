@@ -63,7 +63,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL STUDY METHODS CARD ||============================== //
 
-const TotalStudyMethodsCard = ({ isLoading, studyValue }) => {
+const TotalStudyMethodsCard = ({ studyLoading, studyValue }) => {
     const theme = useTheme();
 
     const [timeValue, setTimeValue] = useState(false);
@@ -73,7 +73,7 @@ const TotalStudyMethodsCard = ({ isLoading, studyValue }) => {
 
     return (
         <>
-            {isLoading ? (
+            {studyLoading ? (
                 <SkeletonTotalOrderCard />
             ) : (
                 <CardWrapper border={false} content={false}>
@@ -180,7 +180,7 @@ const TotalStudyMethodsCard = ({ isLoading, studyValue }) => {
 };
 
 TotalStudyMethodsCard.propTypes = {
-    isLoading: PropTypes.bool
+    studyLoading: PropTypes.bool
 };
 
 export default TotalStudyMethodsCard;

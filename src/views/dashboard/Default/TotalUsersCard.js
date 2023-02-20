@@ -63,7 +63,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL USERS CARD ||============================== //
 
-const TotalUsersCard = ({ isLoading, cardValue }) => {
+const TotalUsersCard = ({ userLoading, cardValue }) => {
     const theme = useTheme();
 
     const [timeValue, setTimeValue] = useState(false);
@@ -73,7 +73,7 @@ const TotalUsersCard = ({ isLoading, cardValue }) => {
 
     return (
         <>
-            {isLoading ? (
+            {userLoading ? (
                 <SkeletonTotalUsersCard />
             ) : (
                 <CardWrapper border={false} content={false}>
