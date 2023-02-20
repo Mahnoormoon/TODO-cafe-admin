@@ -28,7 +28,7 @@ const Dashboard = () => {
         console.log(data);
     };
 
-    const [isLoading, setLoading] = useState(true);
+    const [userLoading, setUserLoading] = useState(true);
     useEffect(() => {
         fetchUsers();
         setLoading(false);
@@ -43,13 +43,13 @@ const Dashboard = () => {
         console.log(data);
     };
 
-    const [isLoading, setLoading] = useState(true);
+    const [userprofileLoading, setUserProfileLoading] = useState(true);
     useEffect(() => {
         fetchUserprofiles();
         setLoading(false);
     }, []); 
 
-    /*const [musiclistenList, setMusiclistenList] = useState([]);
+    const [musiclistenList, setMusiclistenList] = useState([]);
 
     const fetchMusiclistens = async () => {
         const res = await fetch(url + '/music/getall');
@@ -58,13 +58,13 @@ const Dashboard = () => {
         console.log(data);
     };
 
-    const [isLoading, setLoading] = useState(true);
+    const [musicLoading, setMusicLoading] = useState(true);
     useEffect(() => {
         fetchMusiclistens();
         setLoading(false);
-    }, []); */
+    }, []); 
 
-    /*const [studymethodList, setStudymethodList] = useState([]);
+    const [studymethodList, setStudymethodList] = useState([]);
 
     const fetchStudymethods = async () => {
         const res = await fetch(url + '/study/getall');
@@ -73,13 +73,13 @@ const Dashboard = () => {
         console.log(data);
     };
 
-    const [isLoading, setLoading] = useState(true);
+    const [studyLoading, setStudyLoading] = useState(true);
     useEffect(() => {
         fetchStudymethods();
         setLoading(false);
-    }, []); */
+    }, []); 
 
-    /*const [reminderList, setReminderList] = useState([]);
+    const [reminderList, setReminderList] = useState([]);
 
     const fetchReminders = async () => {
         const res = await fetch(url + '/reminder/getall');
@@ -88,13 +88,13 @@ const Dashboard = () => {
         console.log(data);
     };
 
-    const [isLoading, setLoading] = useState(true);
+    const [reminderLoading, setReminderLoading] = useState(true);
     useEffect(() => {
         fetchReminders();
         setLoading(false);
-    }, []); */
+    }, []); 
 
-    /*const [widgetList, setWidgetList] = useState([]);
+    const [widgetList, setWidgetList] = useState([]);
 
     const fetchWidgets = async () => {
         const res = await fetch(url + '/widget/getall');
@@ -103,11 +103,11 @@ const Dashboard = () => {
         console.log(data);
     };
 
-    const [isLoading, setLoading] = useState(true);
+    const [widgetLoading, setWidgetLoading] = useState(true);
     useEffect(() => {
         fetchWidgets();
         setLoading(false);
-    }, []); */
+    }, []); 
 
     return (
         <Grid container spacing={gridSpacing}>
