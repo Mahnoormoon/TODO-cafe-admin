@@ -109,7 +109,7 @@ const Dashboard = () => {
         setWidgetLoading(false);
     }, []); 
 
-    /*const [growthList, setGrowthList] = useState([]);
+    const [growthList, setGrowthList] = useState([]);
 
     const fetchGrowth = async () => {
         const res = await fetch(url + '/growth/getall');
@@ -122,7 +122,7 @@ const Dashboard = () => {
     useEffect(() => {
         fetchGrowth();
         setGrowthLoading(false);
-    }, []); */
+    }, []); 
 
     return (
         <Grid container spacing={gridSpacing}>
@@ -155,7 +155,7 @@ const Dashboard = () => {
             <Grid item xs={12}>
                 <Grid container spacing={gridSpacing}>
                     <Grid item xs={12} md={8}>
-                        <TotalGrowthBarChart growthLoading={growthLoading} />
+                        <TotalGrowthBarChart growthValue={growthList.length}  growthLoading={growthLoading} />
                     </Grid>
                     {/*<Grid item xs={12} md={4}>*/
                         /*<PopularCard isLoading={isLoading} />*/
