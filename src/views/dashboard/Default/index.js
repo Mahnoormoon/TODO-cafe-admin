@@ -31,7 +31,7 @@ const Dashboard = () => {
     const [userLoading, setUserLoading] = useState(true);
     useEffect(() => {
         fetchUsers();
-        setLoading(false);
+        setUserLoading(false);
     }, []);
     
     const [userprofileList, setUserprofileList] = useState([]);
@@ -46,7 +46,7 @@ const Dashboard = () => {
     const [userprofileLoading, setUserprofileLoading] = useState(true);
     useEffect(() => {
         fetchUserprofiles();
-        setLoading(false);
+        setUserprofileLoading(false);
     }, []); 
 
     const [musiclistenList, setMusiclistenList] = useState([]);
@@ -61,7 +61,7 @@ const Dashboard = () => {
     const [musicLoading, setMusicLoading] = useState(true);
     useEffect(() => {
         fetchMusiclistens();
-        setLoading(false);
+        setMusicLoading(false);
     }, []); 
 
     const [studymethodList, setStudymethodList] = useState([]);
@@ -76,7 +76,7 @@ const Dashboard = () => {
     const [studyLoading, setStudyLoading] = useState(true);
     useEffect(() => {
         fetchStudymethods();
-        setLoading(false);
+        setStudyLoading(false);
     }, []); 
 
     const [reminderList, setReminderList] = useState([]);
@@ -91,7 +91,7 @@ const Dashboard = () => {
     const [reminderLoading, setReminderLoading] = useState(true);
     useEffect(() => {
         fetchReminders();
-        setLoading(false);
+        setReminderLoading(false);
     }, []); 
 
     const [widgetList, setWidgetList] = useState([]);
@@ -106,8 +106,23 @@ const Dashboard = () => {
     const [widgetLoading, setWidgetLoading] = useState(true);
     useEffect(() => {
         fetchWidgets();
-        setLoading(false);
+        setWidgetLoading(false);
     }, []); 
+
+    /*const [growthList, setGrowthList] = useState([]);
+
+    const fetchGrowth = async () => {
+        const res = await fetch(url + '/growth/getall');
+        const data = await res.json();
+        setGrowthList(data.result);
+        console.log(data);
+    };
+
+    const [growthLoading, setGrowthLoading] = useState(true);
+    useEffect(() => {
+        fetchGrowth();
+        setGrowthLoading(false);
+    }, []); */
 
     return (
         <Grid container spacing={gridSpacing}>
@@ -140,11 +155,11 @@ const Dashboard = () => {
             <Grid item xs={12}>
                 <Grid container spacing={gridSpacing}>
                     <Grid item xs={12} md={8}>
-                        <TotalGrowthBarChart isLoading={isLoading} />
+                        <TotalGrowthBarChart growthLoading={growthLoading} />
                     </Grid>
-                    /*<Grid item xs={12} md={4}>
-                        <PopularCard isLoading={isLoading} />
-                    </Grid>*/
+                    {/*<Grid item xs={12} md={4}>*/
+                        /*<PopularCard isLoading={isLoading} />*/
+                    /*</Grid>*/}
                 </Grid>
             </Grid>
         </Grid>

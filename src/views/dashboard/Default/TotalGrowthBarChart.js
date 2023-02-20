@@ -35,7 +35,7 @@ const status = [
 
 // ==============================|| DASHBOARD DEFAULT - TOTAL GROWTH BAR CHART ||============================== //
 
-const TotalGrowthBarChart = ({ isLoading }) => {
+const TotalGrowthBarChart = ({ growthLoading, growthValue }) => {
     const [value, setValue] = useState('today');
     const theme = useTheme();
     const customization = useSelector((state) => state.customization);
@@ -83,14 +83,14 @@ const TotalGrowthBarChart = ({ isLoading }) => {
         };
 
         // do not load chart when loading
-        if (!isLoading) {
+        if (!growthLoading) {
             ApexCharts.exec(`bar-chart`, 'updateOptions', newChartData);
         }
     }, [navType, primary200, primaryDark, secondaryMain, secondaryLight, primary, darkLight, grey200, isLoading, grey500]);
 
     return (
         <>
-            {isLoading ? (
+            {growthLoading ? (
                 <SkeletonTotalGrowthBarChart />
             ) : (
                 <MainCard>
@@ -103,7 +103,7 @@ const TotalGrowthBarChart = ({ isLoading }) => {
                                             <Typography variant="subtitle2">Total Growth</Typography>
                                         </Grid>
                                         <Grid item>
-                                            <Typography variant="h3">0</Typography>
+                                            <Typography variant="h3"> {growthValue} </Typography>
                                         </Grid>
                                     </Grid>
                                 </Grid>
@@ -134,7 +134,7 @@ const TotalGrowthBarChart = ({ isLoading }) => {
 };
 
 TotalGrowthBarChart.propTypes = {
-    isLoading: PropTypes.bool
+    growthLoading: PropTypes.bool
 };
 
 export default TotalGrowthBarChart;
