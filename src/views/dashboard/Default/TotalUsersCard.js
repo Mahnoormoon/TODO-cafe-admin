@@ -133,11 +133,11 @@ const TotalUsersCard = ({ userLoading, cardValue }) => {
                                             <Grid item>
                                                 {timeValue ? (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        {cardValue}
+                                                        2
                                                     </Typography>
                                                 ) : (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        {cardValue}
+                                                        2
                                                     </Typography>
                                                 )}
                                             </Grid>

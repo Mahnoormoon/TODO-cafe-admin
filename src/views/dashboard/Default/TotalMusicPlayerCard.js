@@ -17,7 +17,7 @@ import ChartDataYear from './chart-data/total-order-year-line-chart';
 
 // assets
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 const CardWrapper = styled(MainCard)(({ theme }) => ({
     backgroundColor: theme.palette.primary.dark,
@@ -133,11 +133,11 @@ const TotalMusicPlayerCard = ({ musicLoading, musicValue }) => {
                                             <Grid item>
                                                 {timeValue ? (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        {musicValue}
+                                                        8
                                                     </Typography>
                                                 ) : (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        {musicValue}
+                                                        14
                                                     </Typography>
                                                 )}
                                             </Grid>
@@ -150,7 +150,7 @@ const TotalMusicPlayerCard = ({ musicLoading, musicValue }) => {
                                                         color: theme.palette.primary.dark
                                                     }}
                                                 >
-                                                    <ArrowDownwardIcon fontSize="inherit" sx={{ transform: 'rotate3d(1, 1, 1, 45deg)' }} />
+                                                    <ArrowUpwardIcon fontSize="inherit" sx={{ transform: 'rotate3d(1, 1, 1, 45deg)' }} />
                                                 </Avatar>
                                             </Grid>
                                             <Grid item xs={12}>
@@ -161,7 +161,7 @@ const TotalMusicPlayerCard = ({ musicLoading, musicValue }) => {
                                                         color: theme.palette.primary[200]
                                                     }}
                                                 >
-                                                    Total Music Listens
+                                                    Study Music
                                                 </Typography>
                                             </Grid>
                                         </Grid>

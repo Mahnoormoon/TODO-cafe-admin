@@ -5,16 +5,19 @@ import { Grid } from '@mui/material';
 
 // project imports
 import TotalUsersCard from './TotalUsersCard';
-import UserProfileCard from './TotalUserProfileCard';
+import TotalTodoCard from './TotalTodoCard';
 import TotalMusicPlayerCard from './TotalMusicPlayerCard';
 import TotalStudyMethodsCard from './TotalStudyMethodsCard';
 import TotalReminderCard from './TotalReminderCard';
-import TotalWidgetsCard from './TotalWidgetsCard';
 import TotalGrowthBarChart from './TotalGrowthBarChart';
+import UserChart from './UserChart.js';
+import TodoChart from './TodoChart.js';
+import MusicChart from './MusicChart.js';
+import StudyChart from './StudyChart.js';
 import { gridSpacing } from 'store/constant';
 import config from '../../../config';
 
-// ==============================|| DEFAULT DASHBOARD ||============================== //
+// ==============================|| DASHBOARD ||============================== //
 
 const Dashboard = () => {
     const url = config.api_url;
@@ -33,21 +36,21 @@ const Dashboard = () => {
         fetchUsers();
         setUserLoading(false);
     }, []);
-    
-    const [userprofileList, setUserprofileList] = useState([]);
 
-    const fetchUserprofiles = async () => {
-        const res = await fetch(url + '/userprofile/getall');
+    const [todoList, setTodoList] = useState([]);
+
+    const fetchTodos = async () => {
+        const res = await fetch(url + '/todolist/getall');
         const data = await res.json();
-        setUserprofileList(data.result);
+        setTodoList(data.result);
         console.log(data);
     };
 
-    const [userprofileLoading, setUserprofileLoading] = useState(true);
+    const [todoLoading, setTodoLoading] = useState(true);
     useEffect(() => {
-        fetchUserprofiles();
-        setUserprofileLoading(false);
-    }, []); 
+        fetchTodos();
+        setTodoLoading(false);
+    }, []);
 
     const [musiclistenList, setMusiclistenList] = useState([]);
 
@@ -62,7 +65,7 @@ const Dashboard = () => {
     useEffect(() => {
         fetchMusiclistens();
         setMusicLoading(false);
-    }, []); 
+    }, []);
 
     const [studymethodList, setStudymethodList] = useState([]);
 
@@ -77,7 +80,7 @@ const Dashboard = () => {
     useEffect(() => {
         fetchStudymethods();
         setStudyLoading(false);
-    }, []); 
+    }, []);
 
     const [reminderList, setReminderList] = useState([]);
 
@@ -92,22 +95,7 @@ const Dashboard = () => {
     useEffect(() => {
         fetchReminders();
         setReminderLoading(false);
-    }, []); 
-
-    const [widgetList, setWidgetList] = useState([]);
-
-    const fetchWidgets = async () => {
-        const res = await fetch(url + '/widget/getall');
-        const data = await res.json();
-        setWidgetList(data.result);
-        console.log(data);
-    };
-
-    const [widgetLoading, setWidgetLoading] = useState(true);
-    useEffect(() => {
-        fetchWidgets();
-        setWidgetLoading(false);
-    }, []); 
+    }, []);
 
     const [growthList, setGrowthList] = useState([]);
 
@@ -122,15 +110,12 @@ const Dashboard = () => {
     useEffect(() => {
         fetchGrowth();
         setGrowthLoading(false);
-    }, []); 
+    }, []);
 
     return (
         <Grid container spacing={gridSpacing}>
             <Grid item xs={12}>
                 <Grid container spacing={gridSpacing}>
-                    <Grid item lg={4} md={6} sm={6} xs={12}>
-                         <UserProfileCard userValue={userprofileList.length} userprofileLoading={userprofileLoading} /> 
-                    </Grid>
                     <Grid item lg={4} md={6} sm={6} xs={12}>
                         <TotalUsersCard cardValue={userList.length} userLoading={userLoading} />
                     </Grid>
@@ -143,10 +128,10 @@ const Dashboard = () => {
                     <Grid item lg={4} md={12} sm={12} xs={12}>
                         <Grid container spacing={gridSpacing}>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <TotalReminderCard reminderValue={reminderList.length} reminderLoading={reminderLoading} />
+                                <TotalTodoCard todoValue={todoList.length} todoLoading={todoLoading} />
                             </Grid>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <TotalWidgetsCard widgetValue={widgetList.length} widgetLoading={widgetLoading} />
+                                <TotalReminderCard reminderValue={reminderList.length} reminderLoading={reminderLoading} />
                             </Grid>
                         </Grid>
                     </Grid>
@@ -154,12 +139,17 @@ const Dashboard = () => {
             </Grid>
             <Grid item xs={12}>
                 <Grid container spacing={gridSpacing}>
-                    <Grid item xs={12} md={8}>
-                        <TotalGrowthBarChart growthValue={growthList.length}  growthLoading={growthLoading} />
+                    <Grid item xs={6} md={2}>
+                        <UserChart />
+                        <TodoChart />
+                        <MusicChart />
+                        <StudyChart />
                     </Grid>
-                    {/*<Grid item xs={12} md={4}>*/
-                        /*<PopularCard isLoading={isLoading} />*/
-                    /*</Grid>*/}
+                </Grid>
+                <Grid container spacing={gridSpacing}>
+                    <Grid item xs={16} md={12}>
+                        <TotalGrowthBarChart growthValue={growthList.length} growthLoading={growthLoading} />
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

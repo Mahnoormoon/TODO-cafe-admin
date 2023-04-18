@@ -41,12 +41,12 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL SCHEDULING/REMINDER CARD ||============================== //
 
-const TotalReminderCard = ({ reminderLoading, reminderValue }) => {
+const TotalTodoCard = ({ todoLoading, todoValue }) => {
     const theme = useTheme();
 
     return (
         <>
-            {reminderLoading ? (
+            {todoLoading ? (
                 <TotalListenViewCard />
             ) : (
                 <CardWrapper border={false} content={false}>
@@ -74,12 +74,12 @@ const TotalReminderCard = ({ reminderLoading, reminderValue }) => {
                                     }}
                                     primary={
                                         <Typography variant="h4" sx={{ color: '#fff' }}>
-                                            3
+                                            5
                                         </Typography>
                                     }
                                     secondary={
                                         <Typography variant="subtitle2" sx={{ color: 'primary.light', mt: 0.25 }}>
-                                            Total Reminders
+                                            Total Todolists
                                         </Typography>
                                     }
                                 />
@@ -92,8 +92,8 @@ const TotalReminderCard = ({ reminderLoading, reminderValue }) => {
     );
 };
 
-TotalReminderCard.propTypes = {
-    reminderLoading: PropTypes.bool
+TotalTodoCard.propTypes = {
+    todoLoading: PropTypes.bool
 };
 
-export default TotalReminderCard;
+export default TotalTodoCard;

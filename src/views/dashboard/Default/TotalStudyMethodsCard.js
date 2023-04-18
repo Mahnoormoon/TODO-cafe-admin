@@ -17,7 +17,7 @@ import ChartDataYear from './chart-data/total-order-year-line-chart';
 
 // assets
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 const CardWrapper = styled(MainCard)(({ theme }) => ({
     backgroundColor: theme.palette.primary.dark,
@@ -133,11 +133,11 @@ const TotalStudyMethodsCard = ({ studyLoading, studyValue }) => {
                                             <Grid item>
                                                 {timeValue ? (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        {studyValue}
+                                                        12
                                                     </Typography>
                                                 ) : (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        {studyValue}
+                                                        12
                                                     </Typography>
                                                 )}
                                             </Grid>
@@ -150,7 +150,7 @@ const TotalStudyMethodsCard = ({ studyLoading, studyValue }) => {
                                                         color: theme.palette.primary.dark
                                                     }}
                                                 >
-                                                    <ArrowDownwardIcon fontSize="inherit" sx={{ transform: 'rotate3d(1, 1, 1, 45deg)' }} />
+                                                    <ArrowUpwardIcon fontSize="inherit" sx={{ transform: 'rotate3d(1, 1, 1, 45deg)' }} />
                                                 </Avatar>
                                             </Grid>
                                             <Grid item xs={12}>
@@ -161,7 +161,7 @@ const TotalStudyMethodsCard = ({ studyLoading, studyValue }) => {
                                                         color: theme.palette.primary[200]
                                                     }}
                                                 >
-                                                    Total Study Methods Views
+                                                    Study Methods
                                                 </Typography>
                                             </Grid>
                                         </Grid>
