@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 // material-ui
-import { Grid } from '@mui/material';
+import { Grid, MainCard, Typography } from '@mui/material';
 
 // project imports
 import TotalUsersCard from './TotalUsersCard';
@@ -10,6 +10,11 @@ import TotalMusicPlayerCard from './TotalMusicPlayerCard';
 import TotalStudyMethodsCard from './TotalStudyMethodsCard';
 import TotalReminderCard from './TotalReminderCard';
 import TotalGrowthBarChart from './TotalGrowthBarChart';
+import UserDataGrid from './UserDataGrid';
+import TodoDataGrid from './TodoDataGrid';
+import StudyMethodsDataGrid from './StudyMethodsDataGrid';
+import MusicDataGrid from './MusicDataGrid';
+import ContactDataGrid from './ContactDataGrid';
 import UserChart from './UserChart.js';
 import TodoChart from './TodoChart.js';
 import MusicChart from './MusicChart.js';
@@ -138,6 +143,7 @@ const Dashboard = () => {
                 </Grid>
             </Grid>
             <Grid item xs={12}>
+                <Typography variant="h5">MongoDB Charts</Typography>
                 <Grid container spacing={gridSpacing}>
                     <Grid item xs={6} md={2}>
                         <UserChart />
@@ -146,6 +152,76 @@ const Dashboard = () => {
                         <StudyChart />
                     </Grid>
                 </Grid>
+                {/*User Table*/}
+                <div style={{ width: "100%", padding: "20px" }}>
+
+                    <Grid container alignItems="center" justifyContent="space-between">
+                        <Grid item>
+                            <Typography variant="h5">User DataTable</Typography>
+                        </Grid>
+                        <Grid item />
+                    </Grid>
+                    <MainCard sx={{ mt: 2 }} content={false}>
+                        <UserDataGrid />
+                    </MainCard>
+
+                </div>
+                {/*Todo Table*/}
+                <div style={{ width: "100%", padding: "20px" }}>
+
+                    <Grid container alignItems="center" justifyContent="space-between">
+                        <Grid item>
+                            <Typography variant="h5">Todo DataTable</Typography>
+                        </Grid>
+                        <Grid item />
+                    </Grid>
+                    <MainCard sx={{ mt: 2 }} content={false}>
+                        <TodoDataGrid />
+                    </MainCard>
+
+                </div>
+                {/*Music Table*/}
+                <div style={{ width: "100%", padding: "20px" }}>
+
+                    <Grid container alignItems="center" justifyContent="space-between">
+                        <Grid item>
+                            <Typography variant="h5">Study Music DataTable</Typography>
+                        </Grid>
+                        <Grid item />
+                    </Grid>
+                    <MainCard sx={{ mt: 2 }} content={false}>
+                        <MusicDataGrid />
+                    </MainCard>
+
+                </div>
+                {/*Study Methods Table*/}
+                <div style={{ width: "100%", padding: "20px" }}>
+
+                    <Grid container alignItems="center" justifyContent="space-between">
+                        <Grid item>
+                            <Typography variant="h5">Study Methods DataTable</Typography>
+                        </Grid>
+                        <Grid item />
+                    </Grid>
+                    <MainCard sx={{ mt: 2 }} content={false}>
+                        <StudyMethodsDataGrid />
+                    </MainCard>
+
+                </div>
+                {/*Contact Table*/}
+                <div style={{ width: "100%", padding: "20px" }}>
+
+                    <Grid container alignItems="center" justifyContent="space-between">
+                        <Grid item>
+                            <Typography variant="h5">Contact DataTable</Typography>
+                        </Grid>
+                        <Grid item />
+                    </Grid>
+                    <MainCard sx={{ mt: 2 }} content={false}>
+                        <ContactDataGrid />
+                    </MainCard>
+
+                </div>
                 <Grid container spacing={gridSpacing}>
                     <Grid item xs={16} md={12}>
                         <TotalGrowthBarChart growthValue={growthList.length} growthLoading={growthLoading} />
