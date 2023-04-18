@@ -60,7 +60,7 @@ const MusicDataGrid = () => {
 
         ];
 
-    const getStartupFromBackend = async () => {
+    const getDataFromBackend = async () => {
         // send request 
         const res= await fetch('http://localhost:5000/music/getall');
 
@@ -71,7 +71,7 @@ const MusicDataGrid = () => {
         setMusicList(data.result.filter);
     };
     useEffect(() => {
-        getStartupFromBackend();
+        getDataFromBackend();
       }, [])
 
       const handleRowSelection = (e) => {
@@ -87,7 +87,7 @@ const MusicDataGrid = () => {
         })
 
         if(res.status===200){
-          getStartupFromBackend();
+          getDataFromBackend();
           Swal.fire({
             icon: "success",
             title: 'Success',

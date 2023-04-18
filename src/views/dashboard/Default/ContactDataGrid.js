@@ -55,7 +55,7 @@ const ContactDataGrid = () => {
           },
        ];
 
-    const getBlogFromBackend = async () => {
+    const getDataFromBackend = async () => {
         // send request 
         const res= await fetch('http://localhost:5000/contact/getall');
 
@@ -67,7 +67,7 @@ const ContactDataGrid = () => {
 
     };
     useEffect(() => {
-        getBlogFromBackend();
+        getDataFromBackend();
       }, [])
 
       const handleRowSelection = (e) => {
@@ -81,7 +81,7 @@ const ContactDataGrid = () => {
         })
 
         if(res.status===200){
-          getBlogFromBackend();
+          getDataFromBackend();
           Swal.fire({
             icon: "success",
             title: 'Success',
