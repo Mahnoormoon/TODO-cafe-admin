@@ -143,7 +143,7 @@ const Dashboard = () => {
                 </Grid>
             </Grid>
             <Grid item xs={12}>
-                <h5>MongoDB Charts</h5>
+                <h2 className="text-center">MongoDB Charts</h2>
                 <Grid container spacing={gridSpacing}>
                     <Grid item xs={6} md={2}>
                         <UserChart />
@@ -157,7 +157,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>User DataTable</h5>
+                            <h2 className="text-center">User DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>
@@ -169,7 +169,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>Todo DataTable</h5>
+                        <h2 className="text-center">Todo DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>
@@ -181,7 +181,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>Study Music DataTable</h5>
+                        <h2 className="text-center">Music DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>
@@ -193,7 +193,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>Study Methods DataTable</h5>
+                        <h2 className="text-center">Study Methods DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>
@@ -204,7 +204,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>Contact DataTable</h5>
+                        <h2 className="text-center">Contact DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>

@@ -7,7 +7,7 @@ import {
   GridToolbarExport,
   GridToolbarDensitySelector,
 } from '@mui/x-data-grid';
-import { Button } from '../../../node_modules/@mui/material/index';
+import { Button } from '@mui/material';
 
 const CustomToolbar =  () => {
   return (
