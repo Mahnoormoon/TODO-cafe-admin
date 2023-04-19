@@ -102,21 +102,6 @@ const Dashboard = () => {
         setReminderLoading(false);
     }, []);
 
-    const [growthList, setGrowthList] = useState([]);
-
-    const fetchGrowth = async () => {
-        const res = await fetch(url + '/growth/getall');
-        const data = await res.json();
-        setGrowthList(data.result);
-        console.log(data);
-    };
-
-    const [growthLoading, setGrowthLoading] = useState(true);
-    useEffect(() => {
-        fetchGrowth();
-        setGrowthLoading(false);
-    }, []);
-
     return (
         <Grid container spacing={gridSpacing}>
             <Grid item xs={12}>
@@ -157,7 +142,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>User DataTable</h5>
+                            <h2>User DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>
@@ -169,7 +154,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>Todo DataTable</h5>
+                            <h2>Todo DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>
@@ -181,7 +166,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>Study Music DataTable</h5>
+                            <h2>Study Music DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>
@@ -193,7 +178,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>Study Methods DataTable</h5>
+                            <h2>Study Methods DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>
@@ -204,7 +189,7 @@ const Dashboard = () => {
 
                     <Grid container alignItems="center" justifyContent="space-between">
                         <Grid item>
-                            <h5>Contact DataTable</h5>
+                            <h2>Contact DataTable</h2>
                         </Grid>
                         <Grid item />
                     </Grid>
